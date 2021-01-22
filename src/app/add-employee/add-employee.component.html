@@ -1,0 +1,82 @@
+
+<h2 class="signature-font pt-4 ps-4 display-5">Add Employee Form</h2>
+<form>
+    <div class="row">
+        <div class="col p-5">
+            <!-- Name -->
+            <div class="form-group pb-3">
+                <label class="signature-font fs-rem-1-5">Name</label>
+                <input class="form-control signature-font form-control-lg" placeholder="Enter Name" >
+            </div>
+                 <!-- Age -->
+                 <div class="form-group pb-3">
+                    <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Age</label>
+                    <input type="number" class="form-control form-control-lg signature-font" idplaceholder="Enter date" min="10" max="100" >
+                </div>
+
+                   <!-- Gender -->
+                   <div class="form-group pb-3">
+                    <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Gender</label>
+                    <select class="form-control form-control-lg signature-font" id="exampleFormControlSelect1" >
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                </div>
+                <!-- Address -->
+            <div class="form-group pb-3">
+                <label class="signature-font fs-rem-1-5">Address Street</label>
+                <input class="form-control form-control-lg signature-font" placeholder="Street" >
+
+            </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity" class="signature-font fs-rem-1-5">City</label>
+                  <input type="text" class="form-control  form-control-lg signature-font" id="inputCity" >
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip" class="signature-font fs-rem-1-5">Pincode</label>
+                  <input type="text" class="form-control  form-control-lg signature-font" id="inputZip" >
+                </div>
+              </div>
+         
+        </div>
+        <div class="col p-5">
+             <!-- Start Date -->
+            <div class="form-group pb-3">
+                <label class="signature-font fs-rem-1-5">Start Date</label>
+                <input type="date" class="form-control form-control-lg signature-font" placeholder="Enter date" >
+            </div>
+             <!-- End Date -->
+             <div class="form-group pb-3">
+                <label class="signature-font fs-rem-1-5">End Date</label>
+                <input type="date" class="form-control form-control-lg signature-font" placeholder="Enter date" >
+            </div>
+                <!-- Department -->
+            <div class="form-group pb-3">
+                <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Department</label>
+                <select class="form-control form-control-lg signature-font" id="exampleFormControlSelect1" >
+                  <option>Service</option>
+                  <option>Kitchen</option>
+                  <option>Tea & Beverage</option>
+                </select>
+            </div>
+           
+            <div class="form-group pb-3">
+                <label class="signature-font fs-rem-1-5">Monthly Wage</label>
+                <input class="form-control form-control-lg signature-font" placeholder="000,000 Kyats">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex flex-row-reverse">
+        <div style="padding-right:15px">
+            <button type="submit" class="btn btn-primary signature-font">Create</button>
+        </div>
+        <div style="padding-right:15px">
+            <a [routerLink]="['/empList']" class="btn btn-primary">Cancel</a>
+        </div>  
+    </div>   
+</form>
+<hr>

@@ -1,0 +1,10 @@
+
+<ul class="employees">
+<li *ngFor = "let emp of employees">
+    <a [routerLink]="['/empdetail', emp.empId]">
+    <span class="badge">{{emp.empId}}</span> {{emp.empName}}</a>
+</li>
+</ul>
+
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+<hr>

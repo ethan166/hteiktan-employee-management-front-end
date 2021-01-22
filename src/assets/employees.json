@@ -1,0 +1,92 @@
+[
+    {
+        "empId": 0,
+        "empName": "MiBote",
+        "department": "Management",
+        "age": 21,
+        "gender": "Male",
+        "startDate": "2020-01-18",
+        "endDate": null,
+        "address": {
+            "addressId": 0,
+            "streetName": "Mandalay Road",
+            "city": "Meikhtila",
+            "pincode": "MKH123"
+        }
+    },
+    {
+        "empId": 0,
+        "empName": "MiBote",
+        "department": "Management",
+        "age": 21,
+        "gender": "Male",
+        "startDate": "2020-01-18",
+        "endDate": null,
+        "address": {
+            "addressId": 0,
+            "streetName": "Kan Taw Gyi Road",
+            "city": "Myin Chan",
+            "pincode": "MC922"
+        }
+    },
+    {
+        "empId": 0,
+        "empName": "MiBote",
+        "department": "Management",
+        "age": 21,
+        "gender": "Male",
+        "startDate": "2020-01-18",
+        "endDate": null,
+        "address": {
+            "addressId": 0,
+            "streetName": "Pyithayar Road",
+            "city": "Mandalay",
+            "pincode": "MDY333"
+        }
+    },
+    {
+        "empId": 0,
+        "empName": "MiBote",
+        "department": "Management",
+        "age": 21,
+        "gender": "Male",
+        "startDate": "2020-01-18",
+        "endDate": null,
+        "address": {
+            "addressId": 0,
+            "streetName": "Pyithayar Road",
+            "city": "Mandalay",
+            "pincode": "MDY333"
+        }
+    },
+    {
+        "empId": 0,
+        "empName": "Ko Ko",
+        "department": "Floor",
+        "age": 23,
+        "gender": "Female",
+        "startDate": "2020-08-23",
+        "endDate": null,
+        "address": {
+            "addressId": 0,
+            "streetName": "Pyithayar Road",
+            "city": "Mandalay",
+            "pincode": "MDY333"
+        }
+    },
+    {
+        "empId": 0,
+        "empName": "MINIBOO",
+        "department": "Management",
+        "age": 21,
+        "gender": "Male",
+        "startDate": "2020-01-18",
+        "endDate": null,
+        "address": {
+            "addressId": 0,
+            "streetName": "New Address",
+            "city": "Myin Chan",
+            "pincode": "MC922"
+        }
+    }
+]

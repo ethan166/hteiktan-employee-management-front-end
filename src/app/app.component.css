@@ -1,0 +1,73 @@
+
+.signature-font {
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+.signature-font-1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+}
+
+.fs-18 {
+    font-size: 18vh;
+}
+
+.fs-10  {
+    font-size: 8vh;
+}
+.fs-6 {
+    font-size: 6vh;
+}
+
+.fs-rem-2-2 {
+    font-size: 2.2rem;
+}
+
+.fs-rem-1-5 {
+    font-size: 1.5rem;
+}
+
+.myClass {
+    float:left;
+}
+.myClass img {
+    margin-top: 1em;
+    width:250px;
+    height:250px;
+}
+.header {
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 300px;
+    background-color: #e9e9e9;
+}
+
+.footer {
+    position:fixed;
+    bottom: 0;
+    margin-bottom: 0;
+    margin-top: 1em;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #e9e9e9;
+}
+
+.footertxtpos {
+    position: relative;
+    top: 20px;
+    left: 500px;
+}
+
+body {
+    background-color:grey;
+}
+
+.MenuBtn {
+   margin-right:5px;
+   margin-left:5px;
+}

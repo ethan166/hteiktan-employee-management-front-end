@@ -1,0 +1,27 @@
+<header class="header">
+  <div>
+    <div class="myClass col-8 p-5">
+      <p class="fs-10 signature-font-1 ms-5"><strong>Hteik Tan Food Garden</strong></p>
+      <p class="fs-rem-2-2 signature-font ms-5">Pyithayar 3-4 Street, Meiktila</p>
+      <p class="fs-rem-2-2 signature-font ms-5">Phone: 999-999-9999</p>
+    </div>
+    <div class="myClass col-4 p-1 d-flex align-items-center">
+      <img [src]='imgUrl' class="img-thumbnail rounded float-start ms-5">
+    </div>
+  </div>
+</header>
+ <div class="col d-flex"> 
+  <a [routerLink]='["/empList"]' class="MenuBtn btn btn-outline-dark">Employee Lists</a>
+  <a [routerLink]='["/addEmployee"]' class="MenuBtn btn btn-outline-dark">Add Employee</a>
+</div>
+
+
+<router-outlet></router-outlet>
+
+
+<footer class="footer">
+  <div class="txtcolor">
+    <span class="footertxtpos">Copyright
+      &copy; UI & Markup Team, Hteik Tan</span>
+  </div>
+</footer>
