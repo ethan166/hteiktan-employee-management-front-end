@@ -9,4 +9,6 @@ export class Employee {
     startDate: Date;
     endDate: Date;
     address: Address;
+    successMessage: String;
+    errorMessage: String;
 }

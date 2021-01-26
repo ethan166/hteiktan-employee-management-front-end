@@ -10,12 +10,15 @@ import { EmployeeService } from './employee.service';
 })
 export class EmployeeComponent implements OnInit {
   employees: Employee[];
+  total: number;
   errorMessage : string;
   constructor(private empService: EmployeeService) { }
 
   getEmployees() {
     this.empService.getEmployees().subscribe(
-      employees => this.employees = employees,
+      employees => {this.employees = employees
+      this.total=employees.length
+      },
       error => this.errorMessage = <any> error
     );
   }

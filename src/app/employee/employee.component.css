@@ -1,5 +1,5 @@
-.employees {
-    margin: 0 0 2em 0;
+/* .employees {
+    margin: 0 0 5em 0;
     list-style-type: none;
     padding: 0;
     width: 15em;
@@ -33,4 +33,83 @@
     height: 1.8em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+} */
+
+
+/* fs - font-size */
+
+.signature-font {
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
+
+.signature-font-1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+}
+
+.fs-18 {
+    font-size: 18vh;
+}
+
+.fs-12 {
+    font-size: 12vh;
+}
+
+.fs-rem-2-2 {
+    font-size: 2.2rem;
+}
+
+.fs-rem-1-5 {
+    font-size: 1.5rem;
+}
+
+.fs-rem-1 {
+    font-size: 1rem;
+}
+
+.full-h {
+    height: 100%;
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.text-white {
+    color: white;
+}
+#wrapper {
+    width: 100%;
+    background-color: #fff;
+}
+  
+.side-nav {
+    width: 20%;
+    position: fixed;
+    height:100vh;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    /* background-color: red;
+    top: 60px; */
+}
+  
+.content-wrapper {
+    width: 80%;
+    margin-left: 20%;
+    overflow-y: scroll;
+    position: fixed;
+    /* left: 0;
+    top: 0; */
+    height:100vh;
+    /* background-color: blue; */
+}
+  

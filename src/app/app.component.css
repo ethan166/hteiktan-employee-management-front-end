@@ -39,12 +39,7 @@
     width:250px;
     height:250px;
 }
-.header {
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 300px;
-    background-color: #e9e9e9;
-}
+
 
 .footer {
     position:fixed;

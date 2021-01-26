@@ -1,4 +1,4 @@
-
+<!-- 
 <ul class="employees">
 <li *ngFor = "let emp of employees">
     <a [routerLink]="['/empdetail', emp.empId]">
@@ -7,4 +7,136 @@
 </ul>
 
 <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
-<hr>
+<hr> -->
+
+<div class="d-flex justify-content-start">
+    <!-- LEFT PANEL FOR FILTERING -->
+    <div class="side-nav bg-dark text-white">
+        <div class="container p-4">
+            <h2>Filter</h2>
+            <button type="button" class="btn btn-light btn-sm">Clear Selections</button><br><br>
+
+            <h5>Deparment</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                Service
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Kitchen
+                </label>
+            </div>
+            
+            <h5>Hired Date</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                   In the last 6 months
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  In the last 12 months
+                </label>
+            </div>
+
+            <h5>Gender</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Female
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Other
+                </label>
+            </div>
+            <!-- <form>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Option 1</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Option 2</label>
+              </div>
+              <div class="checkbox disabled">
+                <label><input type="checkbox" value="">Option 3</label>
+              </div>
+            </form> -->
+          </div>
+    </div>
+
+
+    <!-- RIGHT PANEL FOR TABLE/LIST -->
+    <div class="content-wrapper bg-light"> 
+        <div class="p-4">
+      
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="input-group rounded">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                              aria-describedby="search-addon" />
+                            <span class="input-group-text border-0" id="search-addon">
+                              <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-outline-dark">+ Add New Employee</button>
+                    </div>
+                </div>
+
+
+       
+            <div class="my-auto pt-2">Total {{total}} employees found based on filter</div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+
+<!-- 
+<ul class="employees">
+<li *ngFor = "let emp of employees">
+  <a [routerLink]="['/empdetail', emp.empId]">
+  <span class="badge">{{emp.empId}}</span> {{emp.empName}}</a>
+</li>
+</ul>
+
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+<hr> -->
+                <tbody>
+                <tr *ngFor= "let emp of employees">
+                    <th scope="row">{{emp.empId}}</th>
+                    <td>{{emp.empName}}</td>
+                    <td>HIRED</td>
+                    <td>{{emp.department}}</td>
+                    <td>
+                        <div class="d-flex justify-content-start">
+                            <button type="button" class="btn btn-info btn-sm me-1" [routerLink]="['/empdetail', emp.empId]">VIEW</button>
+                            <button type="button" class="btn btn-success btn-sm">EDIT</button>
+                        </div>
+                    </td>
+                </tr>
+           
+                </tbody>
+            </table>
+          </div>
+    </div>
+</div>

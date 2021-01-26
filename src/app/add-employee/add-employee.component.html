@@ -1,67 +1,80 @@
 
 <h2 class="signature-font pt-4 ps-4 display-5">Add Employee Form</h2>
-<form>
+<form [formGroup]="empAddForm" (ngSubmit) ="addEmp()" class="form" >
     <div class="row">
         <div class="col p-5">
             <!-- Name -->
             <div class="form-group pb-3">
                 <label class="signature-font fs-rem-1-5">Name</label>
-                <input class="form-control signature-font form-control-lg" placeholder="Enter Name" >
+                <input class="form-control signature-font form-control-lg" placeholder="Enter Name" formControlName="empName">
             </div>
                  <!-- Age -->
                  <div class="form-group pb-3">
                     <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Age</label>
-                    <input type="number" class="form-control form-control-lg signature-font" idplaceholder="Enter date" min="10" max="100" >
+                    <input type="number" class="form-control form-control-lg signature-font" idplaceholder="Enter date" min="10" max="100" formControlName="age">
                 </div>
 
                    <!-- Gender -->
                    <div class="form-group pb-3">
                     <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Gender</label>
-                    <select class="form-control form-control-lg signature-font" id="exampleFormControlSelect1" >
+                    <select class="form-control form-control-lg signature-font" id="exampleFormControlSelect1" formControlName="gender">
                       <option>Male</option>
                       <option>Female</option>
                       <option>Other</option>
                     </select>
                 </div>
                 <!-- Address -->
-            <div class="form-group pb-3">
-                <label class="signature-font fs-rem-1-5">Address Street</label>
-                <input class="form-control form-control-lg signature-font" placeholder="Street" >
+                <div class="form-group">
+                    <fieldset formGroupName="address">
+                        <div class="pb-3">
+                            <label class="signature-font fs-rem-1-5">Address Street</label>
+                            <input class="form-control form-control-lg signature-font" placeholder="Street" formControlName="streetName">
+                        </div>
 
-            </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputCity" class="signature-font fs-rem-1-5">City</label>
-                  <input type="text" class="form-control  form-control-lg signature-font" id="inputCity" >
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="inputCity" class="signature-font fs-rem-1-5">City</label>
+                                <input type="text" class="form-control  form-control-lg signature-font" id="city" formControlName="city">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="inputZip" class="signature-font fs-rem-1-5">Pincode</label>
+                                <input type="text" class="form-control  form-control-lg signature-font" id="pincode" formControlName="pincode" >
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
-                <div class="form-group col-md-2">
-                  <label for="inputZip" class="signature-font fs-rem-1-5">Pincode</label>
-                  <input type="text" class="form-control  form-control-lg signature-font" id="inputZip" >
-                </div>
-              </div>
-         
         </div>
         <div class="col p-5">
              <!-- Start Date -->
             <div class="form-group pb-3">
                 <label class="signature-font fs-rem-1-5">Start Date</label>
-                <input type="date" class="form-control form-control-lg signature-font" placeholder="Enter date" >
+                <input type="date" class="form-control form-control-lg signature-font" placeholder="Enter date" formControlName="startDate">
             </div>
              <!-- End Date -->
              <div class="form-group pb-3">
                 <label class="signature-font fs-rem-1-5">End Date</label>
-                <input type="date" class="form-control form-control-lg signature-font" placeholder="Enter date" >
+                <input type="date" class="form-control form-control-lg signature-font" placeholder="Enter date" formControlName="endDate">
             </div>
                 <!-- Department -->
             <div class="form-group pb-3">
                 <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Department</label>
-                <select class="form-control form-control-lg signature-font" id="exampleFormControlSelect1" >
+                <select class="form-control form-control-lg signature-font" id="exampleFormControlSelect1" formControlName="department">
                   <option>Service</option>
                   <option>Kitchen</option>
                   <option>Tea & Beverage</option>
                 </select>
             </div>
-           
+                <!-- Status -->
+            <!-- <div class="form-group pb-3">
+                <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Status</label>
+                <select class="form-control form-control-lg signature-font" id="exampleFormControlSelect1">
+                  <option>Hired</option>
+                  <option>Resigned</option>
+                  <option>Fired</option>
+                </select>
+            </div> -->
+                <!-- Salary -->
             <div class="form-group pb-3">
                 <label class="signature-font fs-rem-1-5">Monthly Wage</label>
                 <input class="form-control form-control-lg signature-font" placeholder="000,000 Kyats">
@@ -78,5 +91,12 @@
             <a [routerLink]="['/empList']" class="btn btn-primary">Cancel</a>
         </div>  
     </div>   
-</form>
+    <div *ngIf="errorMessage!=null">
+        <span class="text-danger">{{errorMessage}}</span>
+    </div>
+    <div *ngIf="successMessage!=null">
+        <span class="text-success">{{successMessage}}</span>
+    </div>
 <hr>
+</form>
+ 
