@@ -17,6 +17,11 @@ export class EmployeeService {
       .pipe(catchError(this.handleError));
   }
 
+  removeEmployee(emp :Employee)  {
+    return this.http.delete(this.empUrl + "/" +emp.empId)
+    .pipe(catchError(this.handleError));
+  }
+
   addEmployee(empToAdd: Employee): Observable<any> {
     return this.http.post<Employee>(this.empUrl, empToAdd)
     .pipe(catchError(this.handleError));

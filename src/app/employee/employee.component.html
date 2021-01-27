@@ -131,12 +131,19 @@
                         <div class="d-flex justify-content-start">
                             <button type="button" class="btn btn-info btn-sm me-1" [routerLink]="['/empdetail', emp.empId]">VIEW</button>
                             <button type="button" class="btn btn-success btn-sm">EDIT</button>
+                            <button type="button" class="btn btn-danger btn-sm" (click)='removeEmployee(emp)'>DELETE</button>
                         </div>
                     </td>
                 </tr>
            
                 </tbody>
             </table>
+            <div *ngIf="errorMessage!=null">
+              <span class="text-danger">{{errorMessage}}</span>
+          </div>
+          <div *ngIf="successMessage!=null">
+              <span class="text-success">{{successMessage}}</span>
+          </div>
           </div>
     </div>
 </div>
