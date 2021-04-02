@@ -17,14 +17,26 @@ export class EmployeeService {
       .pipe(catchError(this.handleError));
   }
 
-  searchEmployeeByName(name: string) : Observable<Employee[]> {
+  searchEmployees(name: string) : Observable<Employee[]>{
     const url = `${this.empUrl}/findbyname/${name}`;
-    return this.http.get<Employee[]>(url)
-      .pipe(catchError(this.handleError));
-  }
-  removeEmployee(emp :Employee)  {
-    return this.http.delete(this.empUrl + "/" +emp.empId)
+    return  this.http.get<Employee[]>(url)
     .pipe(catchError(this.handleError));
+    
+    // return this.http.get(url)
+    //   .toPromise()
+    //   .then(response => response.json() as Employee)
+    //   .catch(this.handleError);
+   }
+  //  private handleError(error: any): Promise<any> {
+  //   console.error('Error', error); // for demo purposes only
+  //   return Promise.reject(error.message || error);
+  // }
+
+  removeEmployee(emp :Employee) {
+    return this.http.delete(this.empUrl + "/" +emp.empId);
+    // return this.http.delete(this.empUrl + "/" +emp.empId)
+    // .pipe(catchError(this.handleError));
+
   }
 
   addEmployee(empToAdd: Employee): Observable<any> {

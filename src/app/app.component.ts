@@ -14,6 +14,9 @@ export class AppComponent {
   mainPage : boolean = true;
 
   constructor(private router: Router) {}
+  ngOnInit(): void {
+    this.router.navigate(['/empList']);
+  }
   //toEmpAdd() {
     //this.router.navigate(['/addEmployee'])
    // this.mainPage = false;

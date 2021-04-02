@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Address } from '../employee/Address';
 import { Employee } from '../employee/employee';
@@ -12,7 +13,7 @@ import { EmployeeService } from '../employee/employee.service';
 })
 export class AddEmployeeComponent implements OnInit {
 
-  constructor(private router: Router,  private addEmpService: EmployeeService , private fb: FormBuilder) { }
+  constructor(public dialogRef: MatDialogRef<AddEmployeeComponent>, private router: Router,  private addEmpService: EmployeeService , private fb: FormBuilder) { }
   empAddForm: FormGroup;
   errorMessage: string;
   successMessage: string;
@@ -33,6 +34,19 @@ export class AddEmployeeComponent implements OnInit {
     });
   }
 
+  actionFunction() {
+   // alert("You have Added an Employee.");
+   // this.closeModal();
+  }
+
+  // If the user clicks the cancel button a.k.a. the go back button, then\
+  // just close the modal
+  closeModal() {
+    this.dialogRef.close();
+   // this.location.reload();
+   window.location.reload();
+  }
+
   addEmp() {
     let newEmp: Employee = this.empAddForm.value as Employee;
 
@@ -42,10 +56,12 @@ export class AddEmployeeComponent implements OnInit {
       this.successMessage = response.successMessage },
       error => this.errorMessage = <any> error
     );
-  
-      if(confirm("Employee Added Successfully!")) {
-        this.router.navigate(['/empList'])
-      }
+   alert("You have Added an Employee.");
+   this.addEmpService.getEmployees();
+   this.closeModal();
+      // if(confirm("Employee Added Successfully!")) {
+      //   this.router.navigate(['/empList'])
+      // }
   }
   
 

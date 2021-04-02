@@ -1,5 +1,10 @@
 
-<h2 class="signature-font pt-4 ps-4 display-5">Add Employee Form</h2>
+
+<div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title">Add Employee Form</h1>
+    </header>
+
 <form [formGroup]="empAddForm" (ngSubmit) ="addEmp()" class="form" >
     <div class="row">
         <div class="col p-5">
@@ -82,15 +87,31 @@
         </div>
     </div>
 
-
-    <div class="d-flex flex-row-reverse">
+     <!-- <div class="d-flex flex-row-reverse">
         <div style="padding-right:15px">
             <button type="submit" class="btn btn-primary signature-font">Create</button>
         </div>
         <div style="padding-right:15px">
             <a [routerLink]="['/empList']" class="btn btn-primary">Cancel</a>
         </div>  
-    </div>   
+    </div>    -->
+
+    <!-- Modal -->
+
+    <footer id="modal-footer">
+        <div class="d-flex flex-row-reverse">
+            <div style="padding-right:15px">
+                <button type="submit" class="btn btn-primary signature-font" [disabled]="!empAddForm.valid">Create</button>
+            </div>
+            <div style="padding-right:15px">
+                <a (click)="closeModal()" class="btn btn-primary">Cancel</a>
+            </div>  
+        </div> 
+        <!-- <button type="submit" mat-raised-button id="modal-action-button">Create</button> -->
+        <!-- <button mat-raised-button id="modal-cancel-button" (click)="closeModal()">Go back</button> -->
+    </footer>
+
+
     <div *ngIf="errorMessage!=null">
         <span class="text-danger">{{errorMessage}}</span>
     </div>
