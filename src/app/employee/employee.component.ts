@@ -14,8 +14,21 @@ export class EmployeeComponent implements OnInit {
   total: number;
   errorMessage : string;
   successMessage : string;
+  empName: string;
   constructor(private router: Router, private empService: EmployeeService) { }
 
+  onSubmit() {
+    this.searchEmployeeByName();
+  }
+  private searchEmployeeByName() {
+    this.empService.searchEmployeeByName(this.empName).subscribe(
+      employees => {
+        this.employees = employees
+        this.total = employees.length
+      },
+      error => this.errorMessage = <any> error
+    );
+  }
   getEmployees() {
     this.empService.getEmployees().subscribe(
       employees => {this.employees = employees
@@ -41,6 +54,7 @@ export class EmployeeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getEmployees();
+    this.empName="";
   }
 
 }

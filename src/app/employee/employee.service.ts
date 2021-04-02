@@ -17,6 +17,11 @@ export class EmployeeService {
       .pipe(catchError(this.handleError));
   }
 
+  searchEmployeeByName(name: string) : Observable<Employee[]> {
+    const url = `${this.empUrl}/findbyname/${name}`;
+    return this.http.get<Employee[]>(url)
+      .pipe(catchError(this.handleError));
+  }
   removeEmployee(emp :Employee)  {
     return this.http.delete(this.empUrl + "/" +emp.empId)
     .pipe(catchError(this.handleError));
