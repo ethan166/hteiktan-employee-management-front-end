@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Pease see the demo for functionality.
 
-![In maintainence](HteikTan.gif)
+![Simulation in maintainence](HteikTanSimulation.gif)
