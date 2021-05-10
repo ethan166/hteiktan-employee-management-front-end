@@ -53,6 +53,9 @@ export class EmployeeComponent implements OnInit {
       error => this.errorMessage = <any> error
     );
   }
+  clearSelection() {
+    this.getEmployees();
+  }
   removeEmployee(emp: Employee) {
     if(confirm("Are you sure you want to delete?")) {
       // this.router.navigate(['/empList'])

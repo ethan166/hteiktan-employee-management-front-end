@@ -20,12 +20,14 @@ export class AddEmployeeComponent implements OnInit {
   ngOnInit(): void {
 
     this.empAddForm = this.fb.group({
-      empName: ['', Validators.required],
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
       age:['', Validators.required],
       gender:['', Validators.required],
       startDate:['', Validators.required],
       endDate:['', Validators.required],
       department:['', Validators.required],
+      salary:['', Validators.required],
       address:this.fb.group({
         streetName:['', Validators.required],
         city:['', Validators.required],

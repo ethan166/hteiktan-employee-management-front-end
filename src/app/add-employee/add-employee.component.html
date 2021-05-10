@@ -10,9 +10,15 @@
         <div class="col p-5">
             <!-- Name -->
             <div class="form-group pb-3">
-                <label class="signature-font fs-rem-1-5">Name</label>
-                <input class="form-control signature-font form-control-lg" placeholder="Enter Name" formControlName="empName">
+                <label class="signature-font fs-rem-1-5">First Name</label>
+                <input class="form-control signature-font form-control-lg" placeholder="Enter First Name" formControlName="firstname">
             </div>
+
+            <div class="form-group pb-3">
+                <label class="signature-font fs-rem-1-5">Last Name</label>
+                <input class="form-control signature-font form-control-lg" placeholder="Enter Last Name" formControlName="lastname">
+            </div>
+
                  <!-- Age -->
                  <div class="form-group pb-3">
                     <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Age</label>
@@ -65,6 +71,7 @@
             <div class="form-group pb-3">
                 <label class="signature-font fs-rem-1-5" for="exampleFormControlSelect1">Department</label>
                 <select class="form-control form-control-lg signature-font" id="exampleFormControlSelect1" formControlName="department">
+                  <option>Management</option>
                   <option>Service</option>
                   <option>Kitchen</option>
                   <option>Tea & Beverage</option>
@@ -81,8 +88,8 @@
             </div> -->
                 <!-- Salary -->
             <div class="form-group pb-3">
-                <label class="signature-font fs-rem-1-5">Monthly Wage</label>
-                <input class="form-control form-control-lg signature-font" placeholder="000,000 Kyats">
+                <label class="signature-font fs-rem-1-5">Monthly Salary/Wage</label>
+                <input class="form-control form-control-lg signature-font" placeholder="000,000 Kyats" formControlName="salary">
             </div>
         </div>
     </div>
